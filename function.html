@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        function sayHello(){
+            document.writeln("Halo")
+        }
+
+        sayHello()
+
+        //function biasa
+function sayHello(){
+    console.log("Function biasa");    
+}
+
+//function parameter
+function parameter(firstName){
+    const nama = `Hallo ${firstName}`;
+    return nama;
+}
+
+const result = parameter("Bagus");
+console.log(`${result}`)
+
+function getFinalValue(value){
+    if(value>90){
+        return "A"
+    } else {
+        return "B"
+    }
+}
+
+const finalValue = getFinalValue(89)
+console.log(`${finalValue}`)
+
+//function return value
+function isContains(array, searchValue){
+    for(const arrayElement of array){
+        
+        if(arrayElement === searchValue){
+            console.log(`angka ${arrayElement} ditemukan`)
+            return true;
+        }
+    }
+    return false;
+}
+
+const found = isContains([1,2,3,4,5,6,6,7], 3)
+console.log(`${found}`)
+
+//optional parameter
+function optionalParameter(firstName, lastName){
+    console.log(firstName);
+    console.log(lastName);
+}
+
+optionalParameter("Bagus")
+
+//default parameter 
+function defaultParameter(firstName, lastName="unknown"){
+    console.log(firstName)
+    console.log(lastName)
+}
+
+defaultParameter("Satu", undefined)
+    </script>
+</body>
+</html>
+
